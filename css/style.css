@@ -69,8 +69,9 @@ a{
  }
 
 
-.container{
-    width:1158px;
+.container {
+    max-width:1158px;
+    min-width: 320px;
     margin:0 auto;
 }
 
@@ -1023,8 +1024,6 @@ margin-bottom: 8px;
 
 
 
-
-
 .bugas{
     max-width: 100%;
     max-height: 100%;
@@ -1044,3 +1043,350 @@ margin-bottom: 8px;
 }
 
 
+
+
+
+
+/*media queries*/
+
+/**************************************************/
+/*******************MOBILE first approach********/
+/*************************************************/
+@media screen and (max-width:767px) {
+
+
+    .nav .nav-list,
+    .address-list {
+        display: none
+    }
+
+    .container {
+        margin: 0 auto;
+     
+      
+      
+         }
+
+    .header-container {
+        margin-left: 16px;
+
+    }
+    .mobile-menu{
+        position:absolute;
+        top:16px;
+        right: 16px;
+
+    }
+
+        .menu-toggle-mobile {
+                width: 32px;
+                height: 22px;
+                flex-shrink: 0;
+                border: none;
+
+        }
+        /*header 2***/
+         .hero-title, .about-header, .nav-link-mobile,
+          .address-link-mobile-tel{
+            font-family: Roboto;
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 700;
+             line-height: 40px;
+            letter-spacing: 0.72px;
+            text-transform: capitalize;
+
+                }
+
+        .about-img{
+            display:none;
+        }
+
+        .about-list{
+            width: 100%;
+            display:inline-flex;
+            flex-direction: column;
+            gap:72px;
+            text-align: center;
+            align-items: flex-start;
+            padding: 0 16px;
+    
+        }
+        .about-header{
+            margin:0px;
+            text-align: center;
+        }
+        
+        .section, .customer-section{ 
+            padding-top: 96px;
+
+        }
+
+        .customer-section {
+             padding-bottom: 96px;
+        
+                }
+        .about-description{
+            font-weight: 500;
+            margin-top: 8px;
+        }
+        .about-list-item{
+        width: 100%;
+      
+        }
+
+  /*what we are doing section*/
+
+.solution-section{
+
+display:none;
+}
+
+
+.team-list{
+
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:72px ;
+
+}
+.team-section{
+    padding-bottom:96px;
+
+}
+
+/*customer section ****/
+.customer-list{
+    flex-wrap: wrap;
+   justify-content: space-evenly;
+   row-gap: 72px;
+}
+
+.footer-logo{
+
+    padding-top: 96px;
+    row-gap:0;
+    padding-bottom: 0;
+
+
+}
+
+
+.footer-logo-web{
+    width: 100%;
+    display: flex;;
+    text-align: center ;
+    justify-content: center;
+}
+.footer-logo-social-media-list{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 72px;
+   
+
+}
+
+
+
+
+.footer-form{
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+}
+
+.footer-social-media-items{
+        display:flex;
+        flex-direction: column;
+        margin-left: 0;
+        text-align: center;
+        align-items: center;
+     
+   
+}
+
+.footer-social-media-items .footer-form input {
+    width:90vw;
+}
+
+
+.footer-form{
+  display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+
+}
+.footer-form-button{
+    margin-left: 0;
+}
+
+element.style {}
+
+.footer-form button {
+    margin-left: 0;
+}
+/*mobile burger Button menu codes*/
+.menu-toggle {
+    /* this is for burger button */
+
+    min-height: 40px;
+    min-width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    position: absolute;
+    right:16px; 
+
+}
+
+.menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--whitecolor);
+    z-index: 999;
+    transform: translateX(100%);
+    transition: transform 250ms ease-in-out;
+
+    background: var(--WHITE, #FFF);
+     box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 
+     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+      0px 2px 1px 0px rgba(46, 47, 66, 0.08);
+   
+}
+
+.menu-container.is-open {
+    transform: translateX(0);
+
+
+}
+
+.menu-toggle-close{
+    min-height: 40px;
+    min-width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    margin: auto;
+    padding: 0;
+    background-color: rgba(248, 217, 38, .6);
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+
+}
+
+.mobile-menu-nav{
+
+  row-gap: 40px;
+  margin-top: 80px ;
+}
+
+ .mobile-nav-list-item{
+    
+}
+
+.mobile-menu-nav, 
+.address-list-mobile{
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+     align-items: flex-start;
+    list-style: none;
+   
+}
+
+.address-list-mobile{
+   margin-top: 284px;
+   gap:40px;
+
+
+}
+.address-list-item 
+.address-link-mobile-tel{
+    margin-bottom: 40px;
+}
+
+
+
+.mobile-nav-list-item 
+.nav-link-mobile{
+    row-gap: 40px;
+}
+
+ .footer-social-media-list-mobile {
+    margin-top: 48px;
+     display: flex;
+     justify-content: center;
+     gap: 56px;
+
+ }
+
+
+
+
+
+
+}
+
+
+
+
+/**************************************************/
+/*******************MOBILE first approach********/
+/*************************************************/
+
+
+
+/**************************************************/
+/*******************Tablet approach********/
+/*************************************************/
+@media screen and (max-width:767px) {
+
+
+
+
+}
+
+
+/**************************************************/
+/*************end of DESKTOP style****************/
+/**************************************************/
+
+
+
+
+
+/**************************************************/
+/******************DESKTOP  STYLE********/
+/*************************************************/
+@media (min-width: 1158px) {
+
+    .menu-toggle {
+
+        display: none;
+    }
+}
+/**************************************************/
+/*************end of DESKTOP style****************/
+/**************************************************/
