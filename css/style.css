@@ -1375,8 +1375,8 @@ display:none;
 
 
 
-@media screen and (min-width:766px) and (max-width:1157px) ,
-                  (min-width: 766px){
+@media screen and (min-width:766px) and (max-width:1157px) 
+                   {
 
      .menu-toggle,
       .menu-container {
@@ -1458,6 +1458,7 @@ display:none;
             justify-content: flex-start;
             margin-left: 16px;
         }
+    }
 
     
 
@@ -1479,6 +1480,10 @@ display:none;
 /******************Start DESKTOP  Query ********/
 /*************************************************/
 @media (min-width: 1158px){
+    .menu-toggle,
+    .menu-container {
+        display: none;
+}
 
 
 
