@@ -79,6 +79,9 @@ a{
 header {
    max-width: 100%;
     border-bottom: 1px solid var(--cornflowercolor);
+    box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 
+                0px 1px 1px 0px rgba(46, 47, 66, 0.16), 
+                0px 2px 1px 0px rgba(46, 47, 66, 0.08);
     background: var(--whitecolor);
     padding-top: 24px;
     padding-bottom: 24px;
@@ -1347,10 +1350,15 @@ element.style {}
      display: flex;
      justify-content: center;
      gap: 56px;
-
  }
 
+ .solutions-filter-list{
 
+    flex-wrap: wrap ;
+    justify-content: flex-start;
+    margin-left: 16px;
+    gap: 16px 24px;
+ }
 
 
 
@@ -1369,9 +1377,10 @@ element.style {}
 /**************************************************/
 /*******************Start of Tablet Query********/
 /*************************************************/
-@media screen and (min-width:768px) and (max-width:1157px){
+@media screen and (min-width:768px) and (max-width:1157px) ,
+                  (min-width: 768px){
 
-     .menu-toggle {
+     .menu-toggle, .menu-container {
 
         display: none;
     }
@@ -1393,11 +1402,11 @@ element.style {}
 /*************************************************/
 @media (min-width: 1158px){
 
-    .menu-toggle {
 
-        display: none;
-    }
+
 }
+
+ 
 /**************************************************/
 /*************end of DESKTOP style****************/
 /**************************************************/
