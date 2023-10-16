@@ -1292,9 +1292,13 @@ element.style {}
     position: absolute;
     top: 24px;
     right: 24px;
-    fill:currentColor;
-   
-    
+    fill:var(--navcolor);
+}
+
+.menu-toggle-close:focus, 
+.menu-toggle-close:hover{
+    background-color: var(--iriscolor);
+    fill: var(--whitecolor);
 }
 
 .mobile-menu-close{
@@ -1329,10 +1333,6 @@ element.style {}
 
 
 }
-.address-list-item 
-.address-link-mobile-tel{
-    margin-bottom: 40px;
-}
 
 
 
@@ -1343,6 +1343,7 @@ element.style {}
 
  .footer-social-media-list-mobile {
     margin-top: 48px;
+    margin-bottom: 40px;
      display: flex;
      justify-content: center;
      gap: 56px;

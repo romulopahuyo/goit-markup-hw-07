@@ -22,14 +22,6 @@
                 </ul>
             </nav>
 
-             <div class="mobile-menu">
-                        <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
-                            <svg class="mobile-button-icon" width="32" height="22">
-                                <use href="images/burger.svg#burger"> </use>
-                            </svg>
-                        </button>
-            </div>
-
 
             <address class="address">
                 <ul class="address-list">
@@ -308,7 +300,7 @@
     </footer>
 
 
-    <!-- ************************start of modal window***************** -->
+    <!-- ************************start of Hero section Order Service button modal window ***************** -->
     <div class="window-backdrop is-hidden" data-modal>
         <div class="modal">
             <button type="button" class="close" data-modal-close>
@@ -385,7 +377,17 @@
 
 
 
-        <!--Start of Mobile Menu-->
+
+    <!--Start of Mobile Menu using burger button-->
+        <div class="mobile-menu">
+            <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+                <svg class="mobile-button-icon" width="32" height="22">
+                    <use href="images/burger.svg#burger"> </use>
+                </svg>
+            </button>
+        </div>
+    
+    <!--Mobile Menu close button-->
      <div class="menu-container js-menu-container" id="mobile-menu">
             <button type="button"  class="menu-toggle-close js-close-menu">
                 <svg class="mobile-icon" width="8" height="8">
@@ -393,17 +395,17 @@
                 </svg>
             </button>
             <ul class="mobile-menu-nav">
-                <li class="mobile-nav-list-item"><a class="nav-link-mobile studio-active" href="./index.html"> Studio </a> </li>
-                <li class="mobile-nav-list-item"><a class="nav-link-mobile " href="./portfolio.html"> Portfolio</a> </li>
-                <li class="mobile-nav-list-item"> <a class="nav-link-mobile" href="./studio.html"> Contacts </a></li>
+                <li class="nav-list-item mobile-nav-list-item"><a class="nav-link  nav-link-mobile studio-active" href="./index.html"> Studio </a> </li>
+                <li class="nav-list-item mobile-nav-list-item"><a class=" nav-link nav-link-mobile " href="./portfolio.html"> Portfolio</a> </li>
+                <li class="nav-list-item mobile-nav-list-item"> <a class="nav-link  nav-link-mobile" href="./studio.html"> Contacts </a></li>
             </ul>
             <address class="address-mobile">
                 <ul class="address-list-mobile">
                   
-                    <li class="address-list-item"><a class="address-link-mobile-tel" href="tel:+11(000)111-11-11"> +11(000)111-11-11 </a>
+                    <li class="address-list-item"><a class="address-link address-link-mobile-tel" href="tel:+11(000)111-11-11"> +11(000)111-11-11 </a>
                     </li>
 
-                    <li class="address-list-item"><a class="address-link-mobile-xx" href="mailto:info@devstudio.com"> info@devstudio.com </a>
+                    <li class="address-list-item"><a class="address-link  address-link-mobile" href="mailto:info@devstudio.com"> info@devstudio.com </a>
                     </li>
                 </ul>
             </address>
@@ -432,9 +434,6 @@
             </ul>
         
      </div>
-  
-
-
 
 <!-- ************************end of modal window***************** -->
 
