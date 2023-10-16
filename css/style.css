@@ -1052,7 +1052,7 @@ margin-bottom: 8px;
 /**************************************************/
 /*******************MOBILE first approach********/
 /*************************************************/
-@media screen and (max-width:767px) {
+@media screen and (max-width:768px) {
 
 
     .nav .nav-list,
@@ -1272,28 +1272,35 @@ element.style {}
 
 .menu-container.is-open {
     transform: translateX(0);
-
-
 }
 
 .menu-toggle-close{
-    min-height: 40px;
-    min-width: 40px;
+    stroke-width: 1px;
+    min-height: 24px;
+    min-width: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
     justify-items: center;
     margin: auto;
     padding: 0;
-    background-color: rgba(248, 217, 38, .6);
+    background-color:var(--cornflowercolor);
     cursor: pointer;
-    border: none;
+    border: 1px solid rgba(46, 47,66,.1);
     border-radius: 50%;
     outline: none;
     position: absolute;
     top: 24px;
     right: 24px;
+    fill:currentColor;
+   
+    
+}
 
+.mobile-menu-close{
+   position:fixed;
+   top:50%;
+   left: 50%;
 }
 
 .mobile-menu-nav{
@@ -1353,24 +1360,27 @@ element.style {}
 
 
 /**************************************************/
-/*******************MOBILE first approach********/
+/*******************END OF MOBILE first approach********/
 /*************************************************/
 
 
 
 /**************************************************/
-/*******************Tablet approach********/
+/*******************Start of Tablet Query********/
 /*************************************************/
-@media screen and (max-width:767px) {
+@media screen and (min-width:768px) and (max-width:1157px){
 
+     .menu-toggle {
 
+        display: none;
+    }
 
 
 }
 
 
 /**************************************************/
-/*************end of DESKTOP style****************/
+/*************End of Tablet query ****************/
 /**************************************************/
 
 
@@ -1378,9 +1388,9 @@ element.style {}
 
 
 /**************************************************/
-/******************DESKTOP  STYLE********/
+/******************Start DESKTOP  Query ********/
 /*************************************************/
-@media (min-width: 1158px) {
+@media (min-width: 1158px){
 
     .menu-toggle {
 
