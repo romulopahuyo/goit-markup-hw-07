@@ -71,8 +71,8 @@ a{
 
 .container {
     max-width:1158px;
-    min-width: 320px;
     margin:0 auto;
+   
 }
 
 
@@ -149,7 +149,7 @@ gap: 40px;
     position: absolute;
     left: 0;
     bottom: -25px;
-   
+    
 }
 
 .nav-list-item{
@@ -315,8 +315,7 @@ position: relative;
     position: absolute;
     top: 50%;
     left: 50%;
-    min-width: 408px;
-    min-height: 584px;
+    width: 100%;
     background-color: var(--dairycolor);
     border-radius: 4px;
     box-shadow: 
@@ -326,7 +325,10 @@ position: relative;
 
     transform: translate(-50%, -50%) scale(1);
     transition: transform var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
+padding: 72px 24px 24px 24px;
 }
+
+
 
 .window-backdrop.is-hidden .modal {
 
@@ -379,9 +381,11 @@ position: relative;
 
     .modal-form {
     display: flex;
-    position:absolute;
+   /* position:absolute; 
     top:20px;
     left:24px;
+    */
+    width: 100%;;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
@@ -402,7 +406,6 @@ position: relative;
     
 .modal-container{
     position:relative;
-    top: 72px;
                     
  }
  .form-group-input{
@@ -410,7 +413,7 @@ position: relative;
     justify-content: flex-start;
     align-items: center;
     gap: 8px;
-    width: 360px;
+    width: 100%;
     border-radius: 4px;
     border: 1px solid var(--navybluemodal, rgba(46, 47, 66, 0.40));
     padding: 8px 16px;
@@ -497,7 +500,7 @@ position: relative;
     margin-bottom: 24px;
 }
 
-.form-group-agree label {
+.form-group-agree div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -511,7 +514,7 @@ position: relative;
     display: none;
 }
 
-.form-group-agree label svg {
+.form-group-agree div svg {
     width: 16px;
     height: 16px;
     border: 1px solid var(--navyblue);
@@ -520,24 +523,24 @@ position: relative;
     transition: fill var(--transition-duration) var(--animation-timing-function);
 }
 
-.form-group-agree input[type="checkbox"]:checked+label svg {
+.form-group-agree input[type="checkbox"]:checked+div svg {
     stroke: var(--whitecolor);
     background-color: var(--iriscolor);
     border:none;
 }
 
-.form-group-agree label {
+.form-group-agree div {
     user-select: none;
     cursor: pointer;
 }
 
-.form-group-agree label a {
+.form-group-agree div a {
     text-decoration: underline;
     color: var(--iriscolor);
     transition: color var(--transition-duration) var(--animation-timing-function);
 }
 
-.form-group-agree label a:hover {
+.form-group-agree div a:hover {
     color: var(--oceancolor);
 }
 
@@ -921,7 +924,7 @@ font-style: normal;
 font-weight: 500;
 line-height: 24px;
 letter-spacing: 0.64px; 
-padding: 12px 24px;
+padding: 8px 16px;
 background-color:var(--cloudcolor);
 outline:unset;
 border: 1px solid var(--cornflowercolor);
@@ -1065,6 +1068,7 @@ margin-bottom: 8px;
 
     .container {
         margin: 0 auto;
+        padding: 0 16px;
          }
 
     .header-container {
@@ -1247,32 +1251,34 @@ display:none;
     border: none;
     border-radius: 50%;
     outline: none;
-    position: absolute;
-    right:16px; 
+   /* position: absolute;
+    right:16px; */
 
 }
-
+/*this is for the mobile close button*/
 .menu-container {
     position: fixed;
     top: 0;
-    left: 0;
+    left: 100%;
     width: 100vw;
     height: 100vh;
     background-color: var(--whitecolor);
     z-index: 999;
-    transform: translateX(100%);
-    transition: transform 250ms ease-in-out;
+    /*transform: translateX(100%);*/
+    transition: left 250ms ease-in-out;
 
-    background: var(--WHITE, #FFF);
+    background: var(--whitecolor);
      box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 
      0px 1px 1px 0px rgba(46, 47, 66, 0.16),
-      0px 2px 1px 0px rgba(46, 47, 66, 0.08);
+      0px 2px 1px 0px rgba(64, 72, 224, 0.08);
    
 }
 
 .menu-container.is-open {
-    transform: translateX(0);
+    /*transform: translateX(0);*/
+    left:0;
 }
+
 
 .menu-toggle-close{
     stroke-width: 1px;
@@ -1343,8 +1349,8 @@ display:none;
     margin-top: 48px;
     margin-bottom: 40px;
      display: flex;
-     justify-content: center;
-     gap: 56px;
+     justify-content: space-around;
+     /*gap: 56px;*/
  }
 
  .solutions-filter-list{
@@ -1354,6 +1360,26 @@ display:none;
     margin-left: 16px;
     gap: 16px 24px;
  }
+
+ .form-group-accept-terms{
+
+    /* Small Text */
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+    /* 116.667% */
+ }
+
+ .solution-filter {
+
+     padding: 48px 0;
+ }
+
+
+
+
 
 
 
@@ -1378,6 +1404,11 @@ display:none;
 @media screen and (min-width:766px) and (max-width:1157px) 
                    {
 
+     header{
+
+        padding-top: 12px;
+        padding-bottom: 12px;
+                }
      .menu-toggle,
       .menu-container {
 
@@ -1458,6 +1489,11 @@ display:none;
             justify-content: flex-start;
             margin-left: 16px;
         }
+
+        .modal{
+
+            width: 408px;
+        }
     }
 
     
@@ -1483,7 +1519,13 @@ display:none;
     .menu-toggle,
     .menu-container {
         display: none;
-}
+    }
+
+    .modal {
+                
+        width: 408px;
+    }
+
 
 
 
